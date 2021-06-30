@@ -74,5 +74,6 @@ module.exports = {
     contentBase: './dist',
     hot: true,
     inline: true,
+    watchContentBase: true,
   },
 }
