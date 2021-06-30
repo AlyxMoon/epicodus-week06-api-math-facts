@@ -1,13 +1,23 @@
 import 'regenerator-runtime'
+import '@/styles/main.css'
 
 import ApiManager from './js/ApiManager.class'
 
-const main = async () => {
-  const api = new ApiManager()
+const api = new ApiManager()
 
-  const fact = await api.getMathFact()
+const handleButtonClick = async (event) => {
+  const number = document.querySelector('input').value
+  const elOutput = document.querySelector('.output')
 
-  console.log(fact)
+  const { action } = event.currentTarget.dataset
+
+  console.log('huh', action, number)
+
+  elOutput.innerText = action === 'learn' && !number
+    ? 'You need to provide something to learn about!'
+    : await api.getMathFact(action === 'learn' ? number : 'random')
 }
 
-main()
+for (const button of document.querySelectorAll('button')) {
+  button.addEventListener('click', handleButtonClick)
+}

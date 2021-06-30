@@ -76,6 +76,7 @@ module.exports = {
       'src/**/*.js',
       'src/**/*.css',
       'src/**/*.html',
+      'src/**/*.ejs',
     ],
   },
 }

@@ -1,0 +1,23 @@
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+h1, p {
+  margin: 0;
+}
+
+.output {
+  max-width: 60ch;
+  margin: 20px auto;
+  text-align: center;
+}
