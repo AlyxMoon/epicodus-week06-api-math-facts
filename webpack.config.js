@@ -71,9 +71,11 @@ module.exports = {
 
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: './dist',
-    hot: true,
-    inline: true,
-    watchContentBase: true,
+    static: './dist',
+    watchFiles: [
+      'src/**/*.js',
+      'src/**/*.css',
+      'src/**/*.html',
+    ],
   },
 }
